@@ -1,4 +1,3 @@
-
 // POST method implementation:
 async function postData(url = '', data = {}) {
   const response = await fetch(url, {
@@ -14,7 +13,11 @@ async function postData(url = '', data = {}) {
     referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
     body: JSON.stringify(data) // body data type must match "Content-Type" header
   });
-  return response.json(); // parses JSON response into native JavaScript objects
+  if(response.ok) {
+    return await response.json(); // parses JSON response into native JavaScript objects
+  } else {
+    throw await response.json();
+  }
 }
 
 function login(e) {
@@ -26,9 +29,14 @@ function login(e) {
   .then((data) => {
     if(!data.message) {
       window.location.href = "bmi.html";
-    }console.log(data);
+    }
   })
-  .catch((error) => console.log(`Error! ${error}`));
+  .catch((error) => {
+    const errText = error.message;
+    document.querySelector("#login-form p.error").innerHTML = errText;
+    document.getElementById("pswd").value = "";
+    console.log(`Error! ${errText}`)
+  });
 }
 
 

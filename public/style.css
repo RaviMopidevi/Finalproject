@@ -132,3 +132,9 @@ footer h3 {
   font-size: 20px;
   line-height: 1.6;
 }
+
+.error {
+  color: rgb(195, 53, 53);
+  font-size: 20px;
+  text-align: center;
+}

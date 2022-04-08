@@ -24,7 +24,6 @@ function login(username, password) {
   if(!user[0]) throw Error('User not found');
   if(user[0].password !== password) throw Error('Password is incorrect.');
 
-  console.log(user[0]);
   return user[0];
 }
 
