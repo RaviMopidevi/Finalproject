@@ -20,6 +20,9 @@ async function postData(url = '', data = {}) {
   }
 }
 
+const loginForm = document.getElementById("login-form");
+loginForm.addEventListener('submit', login);
+
 function login(e) {
   e.preventDefault();
 
@@ -38,10 +41,3 @@ function login(e) {
     console.log(`Error! ${errText}`)
   });
 }
-
-
-const loginForm = document.getElementById("login-form");
-loginForm.addEventListener('submit', login);
-
-
-

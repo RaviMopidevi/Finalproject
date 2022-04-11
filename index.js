@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 
 const userRoutes = require('./server/routes/user');
-// const assessmentRoutes = require('./server/routes/assessment');
+const assessmentRoutes = require('./server/routes/assessment');
 
 app.use(express.json()); //To parse JSON bodies (Applicable for Express 4.16+)
 
@@ -16,7 +16,7 @@ app.use(function(req, res, next) {
 });
 
 app.use("/users", userRoutes);
-// app.use("/assessment", assessmentRoutes);
+app.use("/assessment", assessmentRoutes);
 
 app.get('*', function (req, res) {
   res.sendFile(path.resolve(__dirname, 'public', 'bmi.html'));
