@@ -7,6 +7,8 @@ const assessmentRoutes = require('./server/routes/assessment');
 
 app.use(express.json()); //To parse JSON bodies (Applicable for Express 4.16+)
 
+app.use(express.static(__dirname + "/public"));
+
 //CORS middleware
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");  
@@ -18,9 +20,6 @@ app.use(function(req, res, next) {
 app.use("/users", userRoutes);
 app.use("/assessment", assessmentRoutes);
 
-app.get('*', function (req, res) {
-  res.sendFile(path.resolve(__dirname, 'public', 'bmi.html'));
-});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));

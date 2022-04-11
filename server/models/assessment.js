@@ -16,6 +16,14 @@ const assessment = [
   }
 ]
 
+let getAllBMI = () => assessment.map(a => a.bmi);
+
+function getAllBMI2() {
+  const onlyBMIs = assessment.map(a => a.bmi);
+  return onlyBMIs;
+}
+
+
 let getHealthState = (userId) => {
   let bmi = getBMI(userId);
   return calculateHealth(bmi)
@@ -35,4 +43,4 @@ function calculateHealth(bmi) {
   return healthState;
 }
 
-module.exports = { };
+module.exports = { getAllBMI, calculateHealth };

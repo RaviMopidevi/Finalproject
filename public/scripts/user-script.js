@@ -20,8 +20,29 @@ async function postData(url = '', data = {}) {
   }
 }
 
+//setting local storage
+function setCurrentUser(user) {
+  localStorage.setItem('user', JSON.stringify(user));
+}
+
+function removeCurrentUser() {
+  localStorage.removeItem('user')
+}
+
+function getCurrentUser() {
+  return JSON.parse(localStorage.getItem('user'));
+}
+
+const logoutBtn = document.getElementById("logout");
+logoutBtn.addEventListener('click', logout)
+
+function logout() {
+  removeCurrentUser();
+  window.location.href = "login.html";
+}
+
 const loginForm = document.getElementById("login-form");
-loginForm.addEventListener('submit', login);
+if(loginForm) loginForm.addEventListener('submit', login);
 
 function login(e) {
   e.preventDefault();
@@ -31,6 +52,7 @@ function login(e) {
   postData('http://localhost:3000/users/login', {username: name, password: pswd})
   .then((data) => {
     if(!data.message) {
+      setCurrentUser(data);
       window.location.href = "bmi.html";
     }
   })
@@ -40,4 +62,29 @@ function login(e) {
     document.getElementById("pswd").value = "";
     console.log(`Error! ${errText}`)
   });
+}
+
+const regForm = document.getElementById("reg-form");
+if(regForm) regForm.addEventListener('submit', register);
+
+function register(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("username").value;
+  const pswd = document.getElementById("pswd").value;
+
+  postData('http://localhost:3000/users/register', {username: name, password: pswd})
+  .then((data) => {
+    if(!data.message) {
+      setCurrentUser(data);
+      window.location.href = "bmi.html";
+    }
+  })
+  .catch((error) => {
+    const errText = error.message;
+    document.querySelector("#reg-form p.error").innerHTML = errText;
+    document.getElementById("pswd").value = "";
+    console.log(`Error! ${errText}`)
+  });
+
 }
