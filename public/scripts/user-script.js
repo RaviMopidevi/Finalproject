@@ -20,7 +20,6 @@ async function postData(url = '', data = {}) {
   }
 }
 
-//setting local storage
 function setCurrentUser(user) {
   localStorage.setItem('user', JSON.stringify(user));
 }
@@ -86,5 +85,4 @@ function register(e) {
     document.getElementById("pswd").value = "";
     console.log(`Error! ${errText}`)
   });
-
 }
