@@ -9,7 +9,6 @@ const users = [
     userName: "fredburger54",
     password: "password"
   },
-  ,
   {
     userId: 34212,
     userName: "coolcathy34",
@@ -40,8 +39,14 @@ function register(user) {
   return newUser;
 }
 
+function deleteUser(userId) {
+  let i = users.map((user) => user.userId).indexOf(userId);
+  users.splice(i, 1);
+  console.log(users)
+}
+
 function userExists(username) {
   return users.filter((u) => u.userName === username);
 }
 
-module.exports = { getUsers, login, register };
+module.exports = { getUsers, login, register, deleteUser };

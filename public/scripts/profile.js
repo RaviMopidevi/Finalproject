@@ -1,4 +1,3 @@
-/*
 import 
 { getCurrentUser, setCurrentUser, removeCurrentUser, logout, fetchData } 
 from './main.js'
@@ -62,12 +61,19 @@ function editAccount(e) {
 }
 
 function deleteAccount() {
-  
-    // .catch((error) => {
-    //   const errText = error.message;
-    //   document.querySelector("#profile div p.error").innerHTML = errText;
-    //   console.log(`Error! ${errText}`)
-    // })
-  
+  if(confirm('Are you sure you want to delete your account???')) {
+    fetchData('/users/delete', {userId: user.userId}, "DELETE")
+    .then((data) => {
+      if(!data.message) {
+        console.log(data.success)
+        logout();
+        window.location.href = "register.html"
+      }
+    })
+    .catch((error) => {
+      const errText = error.message;
+      document.querySelector("#profile div p.error").innerHTML = errText;
+      console.log(`Error! ${errText}`)
+    })
+  }
 }
-*/
