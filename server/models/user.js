@@ -49,4 +49,13 @@ function userExists(username) {
   return users.filter((u) => u.userName === username);
 }
 
-module.exports = { getUsers, login, register, deleteUser };
+function editUser(user) {
+  const u = userExists(user.userName);
+  if(u.length > 0) throw ('Username already in use')
+
+  const cUser = users.filter((u) => u.userId === user.userId);
+  cUser[0].userName = user.userName;
+  return cUser[0];
+}
+
+module.exports = { getUsers, login, register, deleteUser, editUser };

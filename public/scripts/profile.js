@@ -51,13 +51,29 @@ function editProfile() {
 }
 
 function editAccount(e) {
+  e.preventDefault();
+
+  let userName = document.getElementById("username").value;
+  if(userName === user.userName) {
+    let err = "No changes made";
+    document.querySelector("#editForm p.error").innerHTML = err;
+  } else {
+    fetchData('/users/edit', {userId: user.userId, userName: userName}, "PUT")
+    .then((data) => {
+      if(!data.message) {
+        removeCurrentUser();
+        setCurrentUser(data);
+        window.location.href = "profile.html"
+      }
+    })
+ 
+    .catch((error) => {
+       const errText = error.message;
+       document.querySelector("#editForm p.error").innerHTML = errText;
+       console.log(`Error! ${errText}`)
+     });
   
-    // .catch((error) => {
-    //   const errText = error.message;
-    //   document.querySelector("#editForm p.error").innerHTML = errText;
-    //   console.log(`Error! ${errText}`)
-    // });
-  
+  }
 }
 
 function deleteAccount() {
