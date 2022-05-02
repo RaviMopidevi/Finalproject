@@ -79,4 +79,46 @@ async function editUser(user) {
   return newUser[0];
 }
 
-module.exports = { getUsers, login, register, deleteUser, editUser, getUser };
+// ORDER BY example
+async function order(table, column) {
+  const sql = `SELECT ${column}
+    FROM ${table}
+    ORDER BY ${column}
+  `;
+  return await con.query(sql);
+}
+
+async function orderWhere(table, selection, column, condition) {
+  const sql = `SELECT ${selection}
+    FROM ${table}
+    WHERE ${column} = ${condition}
+    ORDER BY ${selection}
+  `;
+  return await con.query(sql);
+}
+
+async function orderUsernames() {
+  const sql = `SELECT * FROM users
+    ORDER BY username DESC
+  `;
+  return await con.query(sql);
+}
+
+//min and max
+async function minHeight() {
+  const sql = `SELECT MIN(user_height) 
+    FROM users
+  `;
+  return await con.query(sql);
+}
+
+async function maxHeight() {
+  const sql = `SELECT MAX(user_height) 
+    FROM users
+  `;
+  return await con.query(sql);
+}
+
+
+
+module.exports = { getUsers, login, register, deleteUser, editUser, getUser, createTable };
