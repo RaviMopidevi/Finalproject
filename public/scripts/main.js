@@ -17,9 +17,10 @@ if(getCurrentUser()) {
   `
 }
 
+// http://localhost:3000
 // Fetch method implementation:
 export async function fetchData(url = '', data = {}, methodType) {
-  const response = await fetch(`http://localhost:3000${url}`, {
+  const response = await fetch(`${url}`, {
     method: methodType, // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
