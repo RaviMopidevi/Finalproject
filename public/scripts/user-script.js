@@ -11,7 +11,7 @@ function login(e) {
   const name = document.getElementById("username").value;
   const pswd = document.getElementById("pswd").value;
   fetchData('/users/login', {username: name, password: pswd}, "POST")
-  .then((data) => {
+  .then((data) => { //cathy123, 12345
     if(!data.message) {
       setCurrentUser(data);
       window.location.href = "bmi.html";

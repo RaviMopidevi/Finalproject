@@ -19,8 +19,8 @@ if(getCurrentUser()) {
 
 // http://localhost:3000
 // Fetch method implementation:
-export async function fetchData(url = '', data = {}, methodType) {
-  const response = await fetch(`${url}`, {
+export async function fetchData(route = '', data = {}, methodType) {
+  const response = await fetch(`https://bmi-apppp.herokuapp.com${route}`, {
     method: methodType, // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
