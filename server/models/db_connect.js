@@ -17,7 +17,7 @@ const query = (sql, binding) => {
   });
 };
 
-const createQuery = "CREATE DATABASE IF NOT EXISTS bmi_db;";
+const createQuery = "CREATE DATABASE IF NOT EXISTS heroku_93555a1f7ce5439;";
 con.query(createQuery);
 
 module.exports = { con, query };
