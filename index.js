@@ -10,6 +10,9 @@ app.use(express.json()); //To parse JSON bodies (Applicable for Express 4.16+)
 app.use(express.static(__dirname + "/public"));
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/public', 'bmi.html')))
 
+app.get('*', function (req, res) {
+  res.sendFile(path.resolve(__dirname, '/public', 'bmi.html'));
+})
 //CORS middleware
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");  
