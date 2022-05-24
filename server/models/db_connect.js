@@ -1,24 +1,16 @@
-require('dotenv').config();
-const mysql = require('mysql2');
+var mysql = require('mysql');
 
-const con = mysql.createPool({
-  host: process.env.MYSQL_HOST,
-  user: process.env.MYSQL_USERNAME,
-  password: process.env.MYSQL_PSWD,
-  database: process.env.MYSQL_DB
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "ship",
+  database: "ecom_ravi_project",
+  multipleStatements: true
 });
 
-const query = (sql, binding) => {
-  return new Promise((resolve, reject) => {
-    con.query(sql, binding, (err, result, fields) => {
-      if (err) reject(err);
-      resolve(result);
-    });
-  });
-};
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
 
-// const createQuery = "CREATE DATABASE IF NOT EXISTS heroku_454ebba218b9a28;";
-// con.query(createQuery);
-
-module.exports = { con, query };
-
+module.exports = con;

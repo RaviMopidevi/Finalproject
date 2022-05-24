@@ -34,7 +34,7 @@ function register(e) {
   const name = document.getElementById("username").value;
   const pswd = document.getElementById("pswd").value;
 
-  fetchData('/users/register', {username: name, password: pswd}, "POST")
+  fetchData('/register', {username: name, password: pswd}, "POST")
   .then((data) => {
     if(!data.message) {
       setCurrentUser(data);

@@ -22,5 +22,5 @@ app.use("/users", userRoutes);
 app.use("/assessment", assessmentRoutes);
 
 
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 81;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));

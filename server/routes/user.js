@@ -23,7 +23,7 @@ router
 
   .post('/register', async (req, res) => {
     try {
-      const user = await User.register(req.body);
+      const user = await User.register(req.body);alert('router'+user);
       console.log(user)
       res.send({...user, password: undefined})
     } catch(error) {

@@ -41,7 +41,7 @@ async function login(username, password) {
   return user[0];
 }
 
-async function register(user) {
+async function register(user) { console.log("resig mod");
   const u = userExists(user.username);
   if(u.length>0) throw Error("Username already exists");
 

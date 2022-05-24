@@ -70,8 +70,8 @@ form input {
 form input[type="submit"] {
   width: 100%;
   margin-left: 0;
-  color: white;
-  background-color: darkolivegreen;
+  color: chocolate;
+  background-color: chocolate;
   font-size: 20px;
   border: none;
   border-radius: 5px;

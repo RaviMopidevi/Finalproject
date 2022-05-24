@@ -27,7 +27,7 @@
 </header>
 
 <form name="itemsAddToCart-form">
-<h1> Item list</h1>
+<h1 style="background-color: chocolate"> Dogs</h1>
 <script type="module" src="scripts/items.js"></script>
 <!--<script type="module" src="models/itemlist.js"></script>-->
 
@@ -35,41 +35,125 @@
     <tr><td ><img width="300px" height="300px" src="images/Canadian-Eskimo-Dog-6200.jpg"></td>
         <td> <table><tr><td>Canadian-Eskimo</td></tr>
             <tr><td>Cost:$6200</td></tr>
-            <tr><td> <input type="submit" value="Add to Cart"  onclick="addToCart('can');"/>
+            <tr><td> <input type="button" value="Add to Cart"  onclick="addToCart('{itemname:Canadian-Eskimo,itemcost:6200}');"/>
             <input type="hidden" value="Canadian-Eskimo" name="itemname"/>
             </td></tr></table>
         </td>
         <td style="background-color: aquamarine"><img width="300px" height="300px" src="images/Chow-Chow-9000.jpg"></td>
         <td> <table><tr><td>Chow-Chow</td></tr>
             <tr><td>Cost:$9000</td></tr>
-            <tr><td> <input type="button" value="Add to Cart"> </td></tr></table>
+            <tr><td> <input type="button" value="Add to Cart" onclick="addToCart('{itemname:Chow-Chow,itemcost:9000}')"> </td></tr></table>
         </td>
         <td ><img width="300px" height="300px" src="images/German-Shepherd-6500.jpg"></td>
         <td> <table><tr><td>German-Shepherd</td></tr>
             <tr><td>Cost:$6500</td></tr>
-            <tr><td> <input type="button" value="Add to Cart"> </td></tr></table>
+            <tr><td> <input type="button" value="Add to Cart" onclick="addToCart('{itemname:German-Shepherd,itemcost:6500}')"> </td></tr></table>
         </td>
     </tr>
 
-    <tr><td ><img width="300px" height="300px" src="images/Canadian-Eskimo-Dog-6200.jpg"></td>
-        <td> <table><tr><td>Canadian-Eskimo</td></tr>
-            <tr><td>Cost:$6200</td></tr>
-            <tr><td> <input type="button" value="Add to Cart" />
+    <tr><td ><img width="300px" height="300px" src="images/Japanese-style-Akita-4000.jpg"></td>
+        <td> <table><tr><td>Japanese-style-Akita</td></tr>
+            <tr><td>Cost:$4000</td></tr>
+            <tr><td> <input type="button" value="Add to Cart" onclick="addToCart('{itemname:Japanese-style-Akita,itemcose:4000}')"/>
                 <input type="hidden" value="Canadian-Eskimo" name="itemname"/>
             </td></tr></table>
         </td>
-        <td style="background-color: aquamarine"><img width="300px" height="300px" src="images/Chow-Chow-9000.jpg"></td>
-        <td> <table><tr><td>Chow-Chow</td></tr>
-            <tr><td>Cost:$9000</td></tr>
-            <tr><td> <input type="button" value="Add to Cart"/> </td></tr></table>
+        <td style="background-color: aquamarine"><img width="300px" height="300px" src="images/Pharaoh-Hound-Dog-7000.jpg"></td>
+        <td> <table><tr><td>Pharaoh-Hound-Dog</td></tr>
+            <tr><td>Cost:$7000</td></tr>
+            <tr><td> <input type="button" value="Add to Cart" onclick="addToCart('{itemname:Pharaoh-Hound-Dog,itemcose:7000})')"/> </td></tr></table>
         </td>
-        <td ><img width="300px" height="300px" src="images/German-Shepherd-6500.jpg"></td>
-        <td> <table><tr><td>German-Shepherd</td></tr>
-            <tr><td>Cost:$6500</td></tr>
-            <tr><td> <input type="button" value="Add to Cart"/> </td></tr></table>
+        <td ><img width="300px" height="300px" src="images/Lowchen-Dog-7000.jpg"></td>
+        <td> <table><tr><td>Lowchen-Dog</td></tr>
+            <tr><td>Cost:$7000</td></tr>
+            <tr><td> <input type="button" value="Add to Cart" onclick="addToCart('{itemname:Lowchen-Dog,itemcost:7000}')"/> </td></tr></table>
         </td>
     </tr>
 </table>
+
+<br><br>
+    <h1 style="background-color: chocolate"> Cats</h1>
+    <table style="background-color: gray" >
+        <tr><td ><img width="300px" height="300px" src="images/3.khao-manee-11000-jpg.jpg"></td>
+            <td> <table><tr><td>khao-manee</td></tr>
+                <tr><td>Cost:$11000</td></tr>
+                <tr><td> <input type="button" value="Add to Cart"  onclick="addToCart('{itemname:khao-manee,itemcost:11000}');"/>
+                    <input type="hidden" value="Canadian-Eskimo" name="itemname"/>
+                </td></tr></table>
+            </td>
+            <td style="background-color: aquamarine"><img width="300px" height="300px" src="images/4.chausie-10000.jpg"></td>
+            <td> <table><tr><td>chausie</td></tr>
+                <tr><td>Cost:$10000</td></tr>
+                <tr><td> <input type="button" value="Add to Cart" onclick="addToCart('{itemname:chausie,itemcost:10000}')"> </td></tr></table>
+            </td>
+            <td ><img width="300px" height="300px" src="images/5.bengal-cat-10000.jpg"></td>
+            <td> <table><tr><td>bengal-cat</td></tr>
+                <tr><td>Cost:$10000</td></tr>
+                <tr><td> <input type="button" value="Add to Cart" onclick="addToCart('{itemname:bengal-cat,itemcost:10000}')"> </td></tr></table>
+            </td>
+        </tr>
+
+        <tr><td ><img width="300px" height="300px" src="images/6.sphynx-cat-9000.jpg"></td>
+            <td> <table><tr><td>sphynx-cat</td></tr>
+                <tr><td>Cost:$9000</td></tr>
+                <tr><td> <input type="button" value="Add to Cart" onclick="addToCart('{itemname:Jsphynx-cat,itemcose:9000}')"/>
+                    <input type="hidden" value="Canadian-Eskimo" name="itemname"/>
+                </td></tr></table>
+            </td>
+            <td style="background-color: aquamarine"><img width="300px" height="300px" src="images/9.persian-cat-5000.jpg"></td>
+            <td> <table><tr><td>persian-cat</td></tr>
+                <tr><td>Cost:$5000</td></tr>
+                <tr><td> <input type="button" value="Add to Cart" onclick="addToCart('{itemname:persian-cat,itemcose:5000})')"/> </td></tr></table>
+            </td>
+            <td ><img width="300px" height="300px" src="images/10.peterbald-3500.jpg"></td>
+            <td> <table><tr><td>peterbald</td></tr>
+                <tr><td>Cost:$3500</td></tr>
+                <tr><td> <input type="button" value="Add to Cart" onclick="addToCart('{itemname:peterbald,itemcost:3500')"/> </td></tr></table>
+            </td>
+        </tr>
+    </table>
+
+    <br><br>
+    <h1 style="background-color: chocolate"> Birds</h1>
+    <table style="background-color: gray" >
+        <tr><td ><img width="300px" height="300px" src="images/Hyacinth-Macaws.-7000jpeg.jpeg"></td>
+            <td> <table><tr><td>Hyacinth-Macaws</td></tr>
+                <tr><td>Cost:$7000</td></tr>
+                <tr><td> <input type="button" value="Add to Cart"  onclick="addToCart('{itemname:Hyacinth-Macaws,itemcost:7000}');"/>
+                    <input type="hidden" value="Canadian-Eskimo" name="itemname"/>
+                </td></tr></table>
+            </td>
+            <td style="background-color: aquamarine"><img width="300px" height="300px" src="images/Racing-Pigeons-1750.jpeg"></td>
+            <td> <table><tr><td>Racing-Pigeons-1750.jpeg</td></tr>
+                <tr><td>Cost:$1750</td></tr>
+                <tr><td> <input type="button" value="Add to Cart" onclick="addToCart('{itemname:Racing-Pigeons-1750.jpeg,itemcost:1750}')"> </td></tr></table>
+            </td>
+            <td ><img width="300px" height="300px" src="images/Mountain-Bluebird-800.jpeg"></td>
+            <td> <table><tr><td>Mountain-Bluebird</td></tr>
+                <tr><td>Cost:$800</td></tr>
+                <tr><td> <input type="button" value="Add to Cart" onclick="addToCart('{itemname:Mountain-Bluebird,itemcost:800}')"> </td></tr></table>
+            </td>
+        </tr>
+
+        <tr><td ><img width="300px" height="300px" src="images/Scarlet-Tanager-750.jpeg"></td>
+            <td> <table><tr><td>Scarlet-Tanager</td></tr>
+                <tr><td>Cost:$750</td></tr>
+                <tr><td> <input type="button" value="Add to Cart" onclick="addToCart('{itemname:Scarlet-Tanager,itemcose:750}')"/>
+                    <input type="hidden" value="Canadian-Eskimo" name="itemname"/>
+                </td></tr></table>
+            </td>
+            <td style="background-color: aquamarine"><img width="300px" height="300px" src="images/Flamingo-2500.jpeg"></td>
+            <td> <table><tr><td>Flamingo</td></tr>
+                <tr><td>Cost:$2500</td></tr>
+                <tr><td> <input type="button" value="Add to Cart" onclick="addToCart('{itemname:Flamingo,itemcose:2500})')"/> </td></tr></table>
+            </td>
+            <td ><img width="300px" height="300px" src="images/Ayam-Cemani-Chicken-4500.jpeg"></td>
+            <td> <table><tr><td>Ayam-Cemani-Chicken</td></tr>
+                <tr><td>Cost:$3500</td></tr>
+                <tr><td> <input type="button" value="Add to Cart" onclick="addToCart('{itemname:Ayam-Cemani-Chicken,itemcost:4500')"/> </td></tr></table>
+            </td>
+        </tr>
+    </table>
 </form>
 </body>
 </html>
