@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce-Online shopping</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<header>
+
+    <style type="text/css">
+        header {
+            background-image: url(images/online.PNG);
+            background-size: auto;
+            height: 30vh;
+            background-attachment: fixed;
+        }
+    </style>
+    <nav></nav>
+    <h1>Deals</h1>
+
+
+</header>
+
+<form name="itemsAddToCart-form">
+<h1> Item list</h1>
+<script type="module" src="scripts/items.js"></script>
+<!--<script type="module" src="models/itemlist.js"></script>-->
+
+<table style="background-color: gray" >
+    <tr><td ><img width="300px" height="300px" src="images/Canadian-Eskimo-Dog-6200.jpg"></td>
+        <td> <table><tr><td>Canadian-Eskimo</td></tr>
+            <tr><td>Cost:$6200</td></tr>
+            <tr><td> <input type="submit" value="Add to Cart"  onclick="addToCart('can');"/>
+            <input type="hidden" value="Canadian-Eskimo" name="itemname"/>
+            </td></tr></table>
+        </td>
+        <td style="background-color: aquamarine"><img width="300px" height="300px" src="images/Chow-Chow-9000.jpg"></td>
+        <td> <table><tr><td>Chow-Chow</td></tr>
+            <tr><td>Cost:$9000</td></tr>
+            <tr><td> <input type="button" value="Add to Cart"> </td></tr></table>
+        </td>
+        <td ><img width="300px" height="300px" src="images/German-Shepherd-6500.jpg"></td>
+        <td> <table><tr><td>German-Shepherd</td></tr>
+            <tr><td>Cost:$6500</td></tr>
+            <tr><td> <input type="button" value="Add to Cart"> </td></tr></table>
+        </td>
+    </tr>
+
+    <tr><td ><img width="300px" height="300px" src="images/Canadian-Eskimo-Dog-6200.jpg"></td>
+        <td> <table><tr><td>Canadian-Eskimo</td></tr>
+            <tr><td>Cost:$6200</td></tr>
+            <tr><td> <input type="button" value="Add to Cart" />
+                <input type="hidden" value="Canadian-Eskimo" name="itemname"/>
+            </td></tr></table>
+        </td>
+        <td style="background-color: aquamarine"><img width="300px" height="300px" src="images/Chow-Chow-9000.jpg"></td>
+        <td> <table><tr><td>Chow-Chow</td></tr>
+            <tr><td>Cost:$9000</td></tr>
+            <tr><td> <input type="button" value="Add to Cart"/> </td></tr></table>
+        </td>
+        <td ><img width="300px" height="300px" src="images/German-Shepherd-6500.jpg"></td>
+        <td> <table><tr><td>German-Shepherd</td></tr>
+            <tr><td>Cost:$6500</td></tr>
+            <tr><td> <input type="button" value="Add to Cart"/> </td></tr></table>
+        </td>
+    </tr>
+</table>
+</form>
+</body>
+</html>
