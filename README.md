@@ -23,3 +23,18 @@ Connection to MYSQL : Open MYSQL workbench run the below queries ALTER USER 'roo
 
 Process to run the code : Download the zip file from the git hub link provided. Extract the file from downloads. Open the folder in visual studio code click ctrl+` to open the terminal. Run the command "npm run dev" in terminal. Server will be connected on port 3000 Open any local browser and type "localhost:3000" Registration page will be displayed, and can perform the actions
 
+ER Diagram :
+
+![RAVINDRA (1)1024_1](https://user-images.githubusercontent.com/105110551/170537451-ffaf4a7c-fb06-47a1-ae11-d929bc95dd4c.jpg)
+
+Registration Page : 
+
+<img width="959" alt="register" src="https://user-images.githubusercontent.com/105110551/170535565-299eed14-5910-4911-9641-b278e0fb5cbc.PNG">
+
+Login Page : 
+
+<img width="953" alt="login" src="https://user-images.githubusercontent.com/105110551/170535532-652bb174-007a-42a9-abc7-02acc3fbe4ec.PNG">
+
+products Page :
+
+<img width="959" alt="product_page1" src="https://user-images.githubusercontent.com/105110551/170535602-261f05a1-ad3e-4115-a627-38ed29a1b802.PNG">
